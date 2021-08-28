@@ -46,7 +46,7 @@ public class ForgotPasswordEmployee extends HttpServlet {
 		Session session = sessionFactory.openSession();
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		EmployeeService employeeService=new EmployeeServiceImpl();
 		List<Employee> employees=employeeService.getAllEmployees();
 		for(Employee e:employees) {
@@ -65,7 +65,7 @@ public class ForgotPasswordEmployee extends HttpServlet {
 			}
 		}
 		
-		out.println("<h1><a href=EmployeePage.html>EmployeePage</a>");
+		out.println("<h1><a href=Login.html>Login</a>");
 	}
 
 	/**

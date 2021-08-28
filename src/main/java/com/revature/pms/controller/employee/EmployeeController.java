@@ -48,7 +48,7 @@ public class EmployeeController extends HttpServlet {
 		EmployeeService employeeService=new EmployeeServiceImpl();
 		employeeService.addEmployee(employee);
 		PrintWriter out = response.getWriter();
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		out.println("<h1>"+employeeName + ", congrats you have successfully opened an account in our bank with balance of INR "+balance);
 		out.println("<h1><a href=Login.html>Login</a>");
 	

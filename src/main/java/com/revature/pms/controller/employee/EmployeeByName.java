@@ -42,12 +42,16 @@ public class EmployeeByName extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		
 		EmployeeService employeeService = new EmployeeServiceImpl();
 		
 
 		List<Employee> employees = employeeService.getEmployeeByName(employeeName);
+		if(employees.size()==0)
+			out.println("<h3>Employee not exist for given name!");
+		else {
+
 		for (Employee employee : employees) {
 			out.println("<h3>Employee Id:" + employee.getEmployeeId());
 			out.println("<h3>Employee Name:" + employee.getEmployeeName());
@@ -56,9 +60,10 @@ public class EmployeeByName extends HttpServlet {
 			out.println("<h3>Employee Password:" + employee.getEmployeePassword());
 			out.println("<h3>Employee Balance:" + employee.getEmployeeBalance());
 			out.println("<h3>Employee registration date:" + employee.getRegistrationDate());
+			out.println("<h4>************************************************************");
 
 		}
-
+		}
 		out.println("<br><br><br><a href=EmployeePage.html>Employee Personal Page</a>");
 
 	}

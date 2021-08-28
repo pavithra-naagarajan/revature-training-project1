@@ -46,7 +46,7 @@ public class CustomerWithdraw extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		CustomerService customerService = new CustomerServiceImpl();
 		result = customerService.isCustomerExists(customerId);
 
@@ -56,7 +56,7 @@ public class CustomerWithdraw extends HttpServlet {
 			if (customerAmount < 0)
 				out.println("<h3>You cannot withdraw negative amount!");
 
-			if (balance > customerAmount) {
+			if (balance > customerAmount && customerAmount >0) {
 				balance = customerService.withdrawalOfCustomer(customerId, customerPassword, customerAmount);
 				out.println("<h3>Amount is withdrawn successfully!");
 				out.println("<h3>After withdrawal the balance is :" + balance);

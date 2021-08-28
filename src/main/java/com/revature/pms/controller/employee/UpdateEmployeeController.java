@@ -45,7 +45,7 @@ public class UpdateEmployeeController extends HttpServlet {
 		EmployeeService employeeService=new EmployeeServiceImpl();
 		res=employeeService.updateEmployee(employeeId,employeeName,mobileNumber,employeeMailId,employeePassword);
 		PrintWriter out = response.getWriter();
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		out.println("<h1>"+employeeName + ", details are updated successfuly!");
 		out.println("<h1><a href=EmployeePage.html>EmployeePage</a>");
 	

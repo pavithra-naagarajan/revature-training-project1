@@ -40,7 +40,7 @@ public class DeleteCustomer extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		CustomerService customerService = new CustomerServiceImpl();
 		result=customerService.isCustomerExists(customerId);
 		

@@ -49,7 +49,7 @@ public class ForgotPasswordCustomer extends HttpServlet {
 		Session session = sessionFactory.openSession();
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		CustomerService customerService=new CustomerServiceImpl();
 		List<Customer> customers=customerService.getAllCustomers();
 		for(Customer c:customers) {
@@ -68,7 +68,7 @@ public class ForgotPasswordCustomer extends HttpServlet {
 			}
 		}
 		
-		out.println("<h1><a href=CustomerPage.html>CustomerPage</a>");
+		out.println("<h1><a href=Login.html>Login</a>");
 	}
 
 

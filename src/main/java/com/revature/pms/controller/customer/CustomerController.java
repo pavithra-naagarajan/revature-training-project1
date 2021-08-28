@@ -52,7 +52,7 @@ public class CustomerController extends HttpServlet {
 		CustomerService customerService = new CustomerServiceImpl();
 		flag = employeeService.employeeApproval(customer);
 		PrintWriter out = response.getWriter();
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		if (flag == true) {
 			customerService.addCustomer(customer);
 			out.println("Your account is approved by employee!");

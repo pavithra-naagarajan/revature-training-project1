@@ -10,11 +10,11 @@
 <title>Employee details</title>
 </head>
 <body bgcolor="lightblue">
-	<h2>Employee details</h2>
+	<h2><center>Employee details</center></h2>
 	<%
 	List<Employee> employees = (List<Employee>) session.getAttribute("allEmployees");
 	%>
-	<table cellpadding="10" cellspacing="10">
+	<center><table cellpadding="10" cellspacing="10" border="5"  bordercolor="rgb(201, 76, 76)">
 		<th>Employee Id</th>
 		<th>Employee Name</th>
 		<th>Password</th>
@@ -43,7 +43,7 @@
 		}
 		%>
 
-	</table>
+	</table></center>
 
 	<br><br><br>
 	<a href ="EmployeePage.html">Employee Page</a>

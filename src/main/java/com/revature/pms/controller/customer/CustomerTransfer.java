@@ -37,7 +37,7 @@ public class CustomerTransfer extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		boolean result = false;
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		CustomerService customerService = new CustomerServiceImpl();
 		result = customerService.transferAmountForCustomer(senderId, receiverId, amount);
 		if (result == true) {

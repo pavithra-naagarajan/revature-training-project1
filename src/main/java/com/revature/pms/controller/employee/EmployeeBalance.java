@@ -42,7 +42,7 @@ public class EmployeeBalance extends HttpServlet {
 		
 		
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		EmployeeService employeeService = new EmployeeServiceImpl();
 		result=employeeService.isEmployeeExists(employeeId);
 		if(result==true) {

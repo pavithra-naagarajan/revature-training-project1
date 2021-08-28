@@ -59,7 +59,7 @@ public class AuthenticateCustomer extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		
 		for(Customer c:customerList) {
 			
@@ -76,8 +76,10 @@ public class AuthenticateCustomer extends HttpServlet {
 			
 		if(flag==1) {
 			out.println("<h3>You have logged in at : " + new java.util.Date());
-			out.println("<br>Your name is : " + customerName);
-			out.println("<br>Your password is : " + password);
+			/*
+			 * out.println("<br>Your name is : " + customerName);
+			 * out.println("<br>Your password is : " + password);
+			 */
 			out.println("<br/><br/><a href=CustomerPage.html>Customer Page</a>");
 			
 		}

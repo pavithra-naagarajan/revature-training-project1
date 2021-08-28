@@ -46,9 +46,11 @@ public class CustomerByName extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
-	
-		
+		out.println("<html><body bgcolor=lightblue align=center>");
+	if(customers.size()==0)
+		out.println("<h3>Customer is not exist for given name!");
+
+	else {	
 		for (Customer customer : customers) {
 			out.println("<h3>Customer Id:" + customer.getCustomerId());
 			out.println("<h3>Customer Name:" + customer.getCustomerName());
@@ -57,8 +59,11 @@ public class CustomerByName extends HttpServlet {
 			out.println("<h3>Customer Password:" + customer.getCustomerPassword());
 			out.println("<h3>Customer Balance:" + customer.getCustomerBalance());
 			out.println("<h3>Customer registration date:" + customer.getRegistrationDate());
+			out.println("<h4>************************************************************");
+
 
 		}
+	}
 
 		out.println("<br><br><br><a href=EmployeePage.html>Employee Page</a>");
 

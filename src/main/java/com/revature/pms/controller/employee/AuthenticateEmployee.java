@@ -54,7 +54,7 @@ public class AuthenticateEmployee extends HttpServlet {
 		int flag = 0;
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center >");
 
 		for (Employee e : employeeList) {
 			if (e.getEmployeeName().equals(employeeName)) {
@@ -67,8 +67,10 @@ public class AuthenticateEmployee extends HttpServlet {
 		}
 		if (flag == 1) {
 			out.println("<h3>You have logged in at : " + new java.util.Date());
-			out.println("<br>Your name is : " + employeeName);
-			out.println("<br>Your password is : " + password);
+			/*
+			 * out.println("<br>Your name is : " + employeeName);
+			 * out.println("<br>Your password is : " + password);
+			 */
 
 			out.println("<br/><br/><a href=EmployeePage.html>Employee Page</a>");
 		} else {

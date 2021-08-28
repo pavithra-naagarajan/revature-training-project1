@@ -2,11 +2,13 @@ package com.revature.pms.controller.customer;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.revature.pms.model.Customer;
 import com.revature.pms.service.CustomerService;
@@ -41,7 +43,7 @@ public class CustomerBalance extends HttpServlet {
 		boolean result = false;
 
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		CustomerService customerService = new CustomerServiceImpl();
 		result = customerService.isCustomerExists(customerId);
 		if (result == true) {
@@ -50,9 +52,13 @@ public class CustomerBalance extends HttpServlet {
 			out.println("<h3>The balance for :" + customerId + " is " + balance);
 
 		} else
-			out.println("<h3>Employee not exist for given employee Id!");
-		out.println("<br><br><br><a href=CustomerPage.html>Customer Personal Page</a>");
-		out.println("<br><a href=EmployeePage.html>Employee Personal Page</a>");
+			out.println("<h3>Customer not exist for given employee Id!");
+		
+	
+		
+		out.println("<br><br><br><a href=CustomerPage.html>CustomerPage</a>");
+		
+	
 
 	}
 

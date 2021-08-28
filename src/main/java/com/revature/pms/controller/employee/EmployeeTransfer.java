@@ -37,7 +37,7 @@ public class EmployeeTransfer extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		boolean result = false;
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		EmployeeService employeeService = new EmployeeServiceImpl();
 		result = employeeService.transferAmountForEmployee(senderId, receiverId, amount);
 		if (result == true) {

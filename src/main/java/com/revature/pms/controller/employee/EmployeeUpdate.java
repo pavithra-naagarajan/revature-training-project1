@@ -44,8 +44,10 @@ public class EmployeeUpdate extends HttpServlet {
 		session.setAttribute("editEmployeeById", employeeId);
 		
 		
+		
+		
 		response.setContentType("text/html");
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		EmployeeService employeeService = new EmployeeServiceImpl();
 		result = employeeService.isEmployeeExists(employeeId);
 

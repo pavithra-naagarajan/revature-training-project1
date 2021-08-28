@@ -44,7 +44,7 @@ public class UpdateCustomerController extends HttpServlet {
 		CustomerService customerService=new CustomerServiceImpl();
 		res=customerService.updateCustomer(customerId,customerName,customerMobileNumber,customerMailId,customerPassword);
 		PrintWriter out = response.getWriter();
-		out.println("<html><body bgcolor=lightblue>");
+		out.println("<html><body bgcolor=lightblue align=center>");
 		out.println("<h1>"+customerName + ", details are updated successfuly!");
 		out.println("<h1><a href=CustomerPage.html>Customer Page</a>");
 	}
